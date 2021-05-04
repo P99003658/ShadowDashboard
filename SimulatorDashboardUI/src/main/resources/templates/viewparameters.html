@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+    <div align="center">
+        <br />
+        <!--<form action="#" th:action="@{/save}" th:object="${booking}"
+            method="post">-->
+            <tr th:each="engine: ${viewparameters}">
+ 
+            <table border="0" cellpadding="10">
+                 
+                 <tr>
+                    <td>ENGINE ID:</td>
+                    <td th:text="${engine.engineid}">ENGINE ID</td>
+                </tr>
+                 
+                <tr>
+                    <td>OIL PRESSURE:</td>
+                    <td th:text="${engine.oilpressure}">OIL PRESSURE</td>
+                </tr>
+                <tr>
+                    <td>OIL TEMPERATURE:</td>
+                    <td th:text="${engine.oiltemperature}">OIL TEMPERATURE</td>
+                </tr>
+                <tr>
+                    <td>ENGINE TEMPERATURE:</td>
+                    <td th:text="${engine.enginetemperature}">ENGINE TEMPERATURE</td>
+                </tr>
+                <tr>
+                    <td>ENGINE RUNTIME:</td>
+                    <td th:text="${engine.engineruntime}">ENGINE RUNTIME</td>
+                </tr> 
+            </table>
+        </form>
+    </div>
+</body>
+</html>
